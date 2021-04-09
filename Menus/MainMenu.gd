@@ -25,11 +25,11 @@ func change_menu_color():
 func _ready():
 	randomize()
 	music.shuffle()
-	var menu_music = load("res://Music and Sounds/menu_music/"+music[0])
-	menu_music.set_loop(true)
-	audioStream.stream = menu_music
-	audioStream.play(0)
-	change_menu_color()
+	#var menu_music = load("res://Music and Sounds/menu_music/"+music[0])
+	#menu_music.set_loop(true)
+	#udioStream.stream = menu_music
+	#audioStream.play(0)
+	#change_menu_color()
 
 func _input(_event):
 	if Input.is_action_just_pressed("ui_down"):
