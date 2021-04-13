@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Windless Slopes.mp3.ogg-c7b1390a869df2a4581532855afbde30.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/soundtrack/Windless Slopes.mp3.ogg"
+dest_files=[ "res://.import/Windless Slopes.mp3.ogg-c7b1390a869df2a4581532855afbde30.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
