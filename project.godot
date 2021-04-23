@@ -16,12 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Quest for the Loot Goblin"
-run/main_scene="res://Menus/MainMenu.tscn"
+run/main_scene="res://game/src/Menus/MainMenu/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-PlayerStats="*res://Player/PlayerStats.tscn"
+PlayerStats="*res://game/src/Player/PlayerStats.tscn"
 
 [display]
 
@@ -90,7 +90,3 @@ attack={
 2d_physics/layer_4="EnemyHurtBox"
 2d_physics/layer_5="Enemy"
 2d_physics/layer_6="SoftCollision"
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Menu Select.wav-dd51c8c7bb5f4135d0e7d3ad5af9abce.sample"
+
+[deps]
+
+source_file="res://game/assets/music_and_sounds/menu/Menu Select.wav"
+dest_files=[ "res://.import/Menu Select.wav-dd51c8c7bb5f4135d0e7d3ad5af9abce.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

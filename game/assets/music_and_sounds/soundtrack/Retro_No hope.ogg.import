@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Retro_No hope.ogg-cc6eb3553862b992852e5481464a41e2.oggstr"
+
+[deps]
+
+source_file="res://game/assets/music_and_sounds/soundtrack/Retro_No hope.ogg"
+dest_files=[ "res://.import/Retro_No hope.ogg-cc6eb3553862b992852e5481464a41e2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

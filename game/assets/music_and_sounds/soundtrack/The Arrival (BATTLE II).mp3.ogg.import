@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/The Arrival (BATTLE II).mp3.ogg-beda39f016b121564a3fd4cb8c1f3d83.oggstr"
+
+[deps]
+
+source_file="res://game/assets/music_and_sounds/soundtrack/The Arrival (BATTLE II).mp3.ogg"
+dest_files=[ "res://.import/The Arrival (BATTLE II).mp3.ogg-beda39f016b121564a3fd4cb8c1f3d83.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
