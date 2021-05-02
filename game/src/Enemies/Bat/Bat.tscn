@@ -66,7 +66,6 @@ FRICTION = 140
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0.0252686, 0.00699615 )
 frames = SubResource( 6 )
-frame = 2
 playing = true
 offset = Vector2( 0, -12 )
 
@@ -109,13 +108,11 @@ shape = SubResource( 10 )
 shape = SubResource( 11 )
 
 [node name="WanderControler" parent="." instance=ExtResource( 9 )]
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 
 [editable path="Hurtbox"]
-
 [editable path="PlayerDetectionZone"]
-
 [editable path="Hibox"]
-
 [editable path="SoftCollision"]
