@@ -1,10 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://game/src/UI/HealthUI.gd" type="Script" id=1]
-[ext_resource path="res://game/assets/UI/HeartUIFull.png" type="Texture" id=2]
-
-[sub_resource type="StreamTexture" id=1]
-load_path = "res://.import/HeartUIEmpty.png-417b0a6fe975644d9dba3671413f10e5.stex"
 
 [node name="HealthUI" type="Control"]
 margin_left = 112.0
@@ -16,31 +12,52 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HeartUIEmpty" type="TextureRect" parent="."]
-anchor_left = -2.8
-anchor_top = -4.4
-anchor_right = -2.8
-anchor_bottom = -4.4
-margin_right = 59.0
-margin_bottom = 11.0
-texture = SubResource( 1 )
-expand = true
-stretch_mode = 2
+[node name="HealthBar" type="ColorRect" parent="."]
+anchor_left = -2.726
+anchor_top = -4.53387
+anchor_right = -2.726
+anchor_bottom = -4.53387
+margin_left = -0.00727081
+margin_top = 158.999
+margin_right = 73.9927
+margin_bottom = 167.999
+color = Color( 0, 0, 0, 0.627451 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Health" type="ColorRect" parent="HealthBar"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 73.0
+margin_bottom = 8.0
+color = Color( 0.980392, 0.196078, 0.196078, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HeartUIFull" type="TextureRect" parent="."]
-anchor_left = -2.8
-anchor_top = -4.4
-anchor_right = -2.8
-anchor_bottom = -4.4
-margin_left = 7.62939e-06
-margin_right = 60.0
-margin_bottom = 11.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 2
+[node name="StaminaBar" type="ColorRect" parent="."]
+anchor_left = -2.73368
+anchor_top = -4.1986
+anchor_right = -2.73368
+anchor_bottom = -4.1986
+margin_left = -0.00727081
+margin_top = 158.999
+margin_right = 73.9927
+margin_bottom = 167.999
+color = Color( 0, 0, 0, 0.627451 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Stamina" type="ColorRect" parent="StaminaBar"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 73.0
+margin_bottom = 8.0
+color = Color( 0.196078, 0.980392, 0.196078, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

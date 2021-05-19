@@ -14,6 +14,7 @@ onready var sprite = $AnimatedSprite
 onready var hurtBox = $Hurtbox
 onready var softCollision = $SoftCollision
 onready var wanderControler = $WanderControler
+onready var blinkAnimation = $BlinkAnimation
 
 enum{
 	IDLE,
@@ -69,7 +70,7 @@ func pick_random_state(state_list):
 
 func accelerate_towards_point(point, delta):
 	var direction = global_position.direction_to(point)
-	velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)			
+	velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
 	sprite.flip_h = velocity.x < 0
 
 func update_wander():
@@ -77,6 +78,7 @@ func update_wander():
 	wanderControler.start_wander_timer(rand_range(1,3))
 
 func _on_Hurtbox_area_entered(area):
+	blinkAnimation.play("Start")
 	stats.health -= area.damage
 	knockback = area.knockback_vector  * FRICTION
 	hurtBox.create_hit_effect(area)
@@ -96,3 +98,8 @@ func create_death_effect():
 func _on_Stats_no_health():
 	queue_free()
 	create_death_effect()
+
+
+func _on_BlinkAnimation_animation_finished(anim_name):
+	if anim_name == "Start":
+		blinkAnimation.play("Stop")

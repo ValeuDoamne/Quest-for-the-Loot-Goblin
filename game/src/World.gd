@@ -1,6 +1,9 @@
 extends Node2D
 
+onready var navigation = $Nav
+onready var gooby = $YSort/Gooby
+onready var tar = $Target
+
 func _ready():
-	pass
-	#var audioStream = $AudioStreamPlayer
-	#audioStream.play(0)
+	gooby.points = navigation.get_simple_path(gooby.global_position, tar.global_position)
+	

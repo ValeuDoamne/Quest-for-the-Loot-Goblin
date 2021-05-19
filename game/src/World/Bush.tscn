@@ -3,8 +3,6 @@
 [ext_resource path="res://game/assets/environment/bushes/Bush.png" type="Texture" id=1]
 [ext_resource path="res://game/assets/environment/shadows/MediumShadow.png" type="Texture" id=2]
 
-
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.39167
 height = 16.8297

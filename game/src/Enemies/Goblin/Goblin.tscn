@@ -1,13 +1,13 @@
 [gd_scene load_steps=59 format=2]
 
-[ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Player/SwordHitBox.gd" type="Script" id=2]
-[ext_resource path="res://Overlap/Hibox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Music and Sounds/Swipe.wav" type="AudioStream" id=5]
-[ext_resource path="res://WhiteColor.shader" type="Shader" id=6]
-[ext_resource path="res://Shadows/MediumShadow.png" type="Texture" id=7]
-[ext_resource path="res://NPC/Goblin/goblin.png" type="Texture" id=8]
+[ext_resource path="res://game/src/Enemies/Goblin/Goblin.gd" type="Script" id=1]
+[ext_resource path="res://game/src/Enemies/Bat/PlayerDetectionZone.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/src/NPC/aux_nodes/Dialogue.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game/src/Overlap/Hurtbox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game/assets/music_and_sounds/effects/Swipe.wav" type="AudioStream" id=5]
+[ext_resource path="res://game/src/Effects/WhiteColor.shader" type="Shader" id=6]
+[ext_resource path="res://game/assets/environment/shadows/MediumShadow.png" type="Texture" id=7]
+[ext_resource path="res://game/assets/enemies/goblin/goblin.png" type="Texture" id=8]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 6 )
@@ -45,37 +45,13 @@ tracks/1/keys = {
 "method": "attack_animation_finished"
 } ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("HitboxPivot:rotation_degrees")
+tracks/2/type = "audio"
+tracks/2/path = NodePath("AudioStreamPlayer")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 90.0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("HitboxPivot/SwordHibox/CollisionShape2D:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/4/type = "audio"
-tracks/4/path = NodePath("AudioStreamPlayer")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
 "clips": [ {
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -112,37 +88,13 @@ tracks/1/keys = {
 "method": "attack_animation_finished"
 } ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("HitboxPivot:rotation_degrees")
+tracks/2/type = "audio"
+tracks/2/path = NodePath("AudioStreamPlayer")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("HitboxPivot/SwordHibox/CollisionShape2D:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/4/type = "audio"
-tracks/4/path = NodePath("AudioStreamPlayer")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
 "clips": [ {
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -179,37 +131,13 @@ tracks/1/keys = {
 "method": "attack_animation_finished"
 } ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("HitboxPivot:rotation_degrees")
+tracks/2/type = "audio"
+tracks/2/path = NodePath("AudioStreamPlayer")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 270.0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("HitboxPivot/SwordHibox/CollisionShape2D:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/4/type = "audio"
-tracks/4/path = NodePath("AudioStreamPlayer")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
 "clips": [ {
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -246,37 +174,13 @@ tracks/1/keys = {
 "method": "attack_animation_finished"
 } ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("HitboxPivot:rotation_degrees")
+tracks/2/type = "audio"
+tracks/2/path = NodePath("AudioStreamPlayer")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 180.0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("HitboxPivot/SwordHibox/CollisionShape2D:disabled")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0.1, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/4/type = "audio"
-tracks/4/path = NodePath("AudioStreamPlayer")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
 "clips": [ {
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -654,9 +558,6 @@ graph_offset = Vector2( -695.185, 22.356 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=46]
 
-[sub_resource type="CapsuleShape2D" id=47]
-height = 12.0
-
 [sub_resource type="CapsuleShape2D" id=48]
 radius = 5.52343
 height = 4.27277
@@ -693,9 +594,13 @@ tracks/0/keys = {
 "values": [ false ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[sub_resource type="CircleShape2D" id=51]
+radius = 13.7315
+
+[node name="Goblin" type="KinematicBody2D"]
 position = Vector2( -0.258, 0 )
-collision_layer = 2147483650
+collision_layer = 2147483712
+collision_mask = 3
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -742,20 +647,6 @@ parameters/Idle/blend_position = Vector2( 0, 1 )
 parameters/Roll/blend_position = Vector2( 0, 1 )
 parameters/Run/blend_position = Vector2( -0.0258064, 0.243234 )
 
-[node name="HitboxPivot" type="Position2D" parent="."]
-position = Vector2( 0, -4 )
-rotation = 1.5708
-
-[node name="SwordHibox" parent="HitboxPivot" instance=ExtResource( 3 )]
-position = Vector2( 15, 0 )
-collision_mask = 8
-script = ExtResource( 2 )
-damage = 20
-
-[node name="CollisionShape2D" parent="HitboxPivot/SwordHibox" index="0"]
-shape = SubResource( 47 )
-disabled = true
-
 [node name="Hurtbox" parent="." instance=ExtResource( 4 )]
 collision_layer = 4
 
@@ -769,8 +660,16 @@ stream = ExtResource( 5 )
 [node name="BlinkAnimation" type="AnimationPlayer" parent="."]
 anims/Start = SubResource( 49 )
 anims/Stop = SubResource( 50 )
+
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 2 )]
+
+[node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+shape = SubResource( 51 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
-[editable path="HitboxPivot/SwordHibox"]
-
 [editable path="Hurtbox"]
+[editable path="PlayerDetectionZone"]
+[editable path="CanvasLayer"]

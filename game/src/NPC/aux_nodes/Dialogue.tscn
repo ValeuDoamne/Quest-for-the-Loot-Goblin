@@ -1,0 +1,96 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://game/assets/fonts/HelvetiPixel.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://game/src/NPC/Gooby/PopupDialog.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Load Dialogue"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect/Dialogue:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="PopupDialog" type="PopupDialog" parent="."]
+pause_mode = 2
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 13.0
+margin_top = -57.0
+margin_right = -15.0
+margin_bottom = -1.0
+popup_exclusive = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ColorRect" type="ColorRect" parent="PopupDialog"]
+margin_left = -8.0
+margin_top = -5.0
+margin_right = 301.0
+margin_bottom = 56.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NPCName" type="Label" parent="PopupDialog/ColorRect"]
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 295.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 1 )
+text = "Gooby"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue" type="Label" parent="PopupDialog/ColorRect"]
+margin_left = 5.0
+margin_top = 15.0
+margin_right = 295.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 2 )
+text = "Hello, I'm Gooby, I love spagetti <3."
+autowrap = true
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContinueDialogue" type="Label" parent="PopupDialog/ColorRect"]
+margin_left = 186.646
+margin_top = 45.0329
+margin_right = 302.646
+margin_bottom = 59.0329
+custom_fonts/font = SubResource( 3 )
+text = "Press [Z] to Continue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PopupDialog"]
+"anims/Load Dialogue" = SubResource( 4 )
+
+[connection signal="animation_finished" from="PopupDialog/AnimationPlayer" to="PopupDialog" method="_on_AnimationPlayer_animation_finished"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://game/src/Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://game/assets/player/main_guy_blue_eyes.png" type="Texture" id=2]
+[ext_resource path="res://game/assets/player/main_guy+rollanimation.png" type="Texture" id=2]
 [ext_resource path="res://game/src/Effects/WhiteColor.shader" type="Shader" id=3]
 [ext_resource path="res://game/src/Player/SwordHitBox.gd" type="Script" id=4]
 [ext_resource path="res://game/src/Overlap/Hurtbox.tscn" type="PackedScene" id=5]
@@ -692,7 +692,9 @@ tracks/0/keys = {
 "values": [ false ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"Persistent",
+]]
 position = Vector2( -0.258, 0 )
 collision_layer = 2147483650
 script = ExtResource( 1 )
@@ -709,9 +711,10 @@ material = SubResource( 1 )
 position = Vector2( 0, -9 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 39
+frame = 21
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.594605, -0.0743256 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
@@ -771,6 +774,7 @@ anims/Start = SubResource( 49 )
 anims/Stop = SubResource( 50 )
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="animation_finished" from="BlinkAnimation" to="." method="_on_BlinkAnimation_animation_finished"]
 
 [editable path="HitboxPivot/SwordHibox"]
 [editable path="Hurtbox"]

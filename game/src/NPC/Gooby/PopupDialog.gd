@@ -11,7 +11,7 @@ func _ready():
 
 func _input(event):
 	if event is InputEventKey:
-		if npc.playerDetect.can_see_player():
+		if npc.playerDetect.can_see_player() or npc.intro:
 			if event.is_action_released("ui_select"):
 				set_process_input(false)
 				npc.talk()
@@ -34,8 +34,6 @@ func dialogue_play():
 		$AnimationPlayer.play("Load Dialogue")
 
 func set_and_play(new_value = ""):
-	if new_value == "1337":
-		close()
 	npc.dialogue_state += 1
 	dialogue_set(new_value)
 	dialogue_play()
